@@ -1,3 +1,9 @@
+body {
+    background-color: aqua;
+}
+h1 {
+    text-align: center;
+}
 .semua {
     border: 5px solid black;
     width: 415px;
@@ -8,7 +14,7 @@
     width: 400px;
     height: 600px;
     padding: 3px;
-    border: 5px solid white;
+    border: 5px solid aqua;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 2fr 1fr 1fr;
