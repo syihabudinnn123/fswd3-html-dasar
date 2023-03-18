@@ -1002,20 +1002,33 @@ let mahasiswa = [
 ];
 
 
+//menghitung jumlah mahasiswa perempuan dan laki-laki
+const femaleStudent = mahasiswa.filter((value) => value.gender == 'F');
+const maleStudent = mahasiswa.filter((value) => value.gender == 'M');
 
-let maleMahasiswa = mahasiswa.filter(getMaleMahasiswa);
+//mengambil data score
+const femaleScore = femaleStudent.map((value) => value.score);
+const maleScore = maleStudent.map((value) => value.score);
 
-function getMaleMahasiswa(value, index, array) {
-  return value.gender = "M";
-}
+//mencari rata-rata nilai
+const femaleTotalScore = femaleScore.reduce((total,value) => total + value);
+const maleTotalScore = maleScore.reduce((total, value) => total + value);
 
-console.log(maleMahasiswa)
+//mencari nilai minimum
+const minFemaleScore = femaleScore.reduce((total, value) => Math.min(total, value));
+const minMaleScore = maleScore.reduce((total, value) => Math.min(total, value));
 
-let femaleMahasiswa = mahasiswa.filter(getFemaleMahasiswa)
+//mencari nilai maksimal 
+const maxFemaleScore = femaleScore.reduce((total, value) => Math.max(total, value));
+const maxMaleScore = maleScore.reduce((total, value) => Math.max(total, value));
 
-function getFemaleMahasiswa(value, index, array) {
-  return value.gender = "F"
-}
 
-console.log(femaleMahasiswa)
+console.log(`Jumlah Mahasiswi : ${femaleStudent.length}`);
+console.log('Rata-rata nilai perempuan : ' + femaleTotalScore / femaleStudent.length);
+console.log(`Min : ${minFemaleScore}`);
+console.log(`Max : ${maxFemaleScore}`);
 
+console.log(`Jumlah Mahasiswa : ${maleStudent.length}`);
+console.log('Rata-rata Nilai Laki-Laki : ' + maleTotalScore / maleStudent.length);
+console.log(`Min : ${minMaleScore}`);
+console.log(`Max : ${maxMaleScore}`);
