@@ -1,0 +1,21 @@
+.jumbotron {
+  padding: 2rem 1rem;
+  padding-left: 40%;
+  background-color: #d1d9f2;
+}
+.kotakan {
+  width: 80%;
+  background-color: #f6f6f6;
+  height: 1500px;
+  float: left;
+  padding: 20px;
+}
+.card {
+  float: left;
+  margin: 0px 10px;
+}
+.pinggir {
+  padding: 20px;
+  background-color: #f6f6f6;
+  height: 1500px;
+}
